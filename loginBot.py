@@ -43,8 +43,8 @@ def startBot(username, password, url):
         
     driver.quit()
 
-username = "********"
-password = "****"
-url = "www.****.com"
+username = "student"
+password = "Password123"
+url = "https://practicetestautomation.com/practice-test-login/"
 
 startBot(username, password, url)
