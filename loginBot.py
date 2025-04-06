@@ -11,13 +11,11 @@ def startBot(username, password, url):
     
     # Set the path to your Chrome browser executable 
     chrome_binary_path = r"D:\Chrome Driver\chrome-win64\chrome.exe"
-    
-    # Set the webdriver.chrome.driver system property explicitly
     os.environ["webdriver.chrome.driver"] = chrome_driver_path
     
     # Setup Chrome options
     chrome_options = Options()
-    chrome_options.binary_location = chrome_binary_path  # Set the path to Chrome binary
+    chrome_options.binary_location = chrome_binary_path
     
     # Create a Service object with the path to ChromeDriver
     service = Service(chrome_driver_path)
@@ -28,10 +26,8 @@ def startBot(username, password, url):
     # Open the URL in Chrome
     driver.get(url)
     
-    # Find the username field and enter the username
+    # Find the username and password field and enter them
     driver.find_element(By.NAME, "username_field_name").send_keys(username)
-    
-    # Find the password field and enter the password
     driver.find_element(By.NAME, "password_field_name").send_keys(password)  
     
     # Find the login button and click it
@@ -48,7 +44,7 @@ def startBot(username, password, url):
     driver.quit()
 
 username = "********"
-password = "tarya"
-url = "https://www.facebook.com/?stype=lo&flo=1&deoia=1&jlou=AfcrIwdYwN-QnzlSqzGeF4wwP1kd2_pEi2E9fkqY9ctsydyUMo9xhpZ7aKiennW0cDw1N3HiXguG5RoTKwiyzjBmBc78XiWdlHtPPr0p7zb82A&smuh=44227&lh=Ac_cm_8CULVpCga2dJU"
+password = "****"
+url = "www.****.com"
 
 startBot(username, password, url)
